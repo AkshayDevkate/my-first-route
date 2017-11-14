@@ -10,6 +10,7 @@ extension Droplet {
     get("age") { req in
       return "\(23)"
     }
+    
     get("json") { req in
       return try JSON(node: ["name": "Martin J. Lasek", "age": 26])
     }
