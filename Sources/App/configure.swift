@@ -1,4 +1,3 @@
-import FluentSQLite
 import Vapor
 
 public func configure(
