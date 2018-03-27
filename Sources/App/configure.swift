@@ -11,6 +11,6 @@ public func configure(
     try routes(router)
     services.register(router, as: Router.self)
 
-    let myService = try EngineServerConfig.detect(port: 8001)
-    services.register(myService)
+    let aService = try EngineServerConfig.detect(from: &env, port: 8001)
+    services.register(aService)
 }
