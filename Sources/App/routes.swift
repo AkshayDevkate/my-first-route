@@ -1,6 +1,6 @@
-import Routing
 import Vapor
 
+/// Register your application's routes here.
 public func routes(_ router: Router) throws {
 
     // return a String
@@ -19,8 +19,8 @@ public func routes(_ router: Router) throws {
     }
 }
 
-// note: structs or classes
-// must conform to Content to be able to encode to json
+/// note: structs or classes
+/// must conform to Content to be able to encode to JSON
 struct Person: Content {
     var name: String
     var age: Int
