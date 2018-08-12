@@ -1,6 +1,6 @@
 import Vapor
 
-/// Called before your application initializes.
+/// Called before your application initializes
 public func configure(
     _ config: inout Config,
     _ env: inout Environment,
@@ -10,7 +10,4 @@ public func configure(
     let router = EngineRouter.default()
     try routes(router)
     services.register(router, as: Router.self)
-
-    let myService = NIOServerConfig.default(port: 8001)
-    services.register(myService)
 }

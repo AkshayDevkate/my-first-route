@@ -1,26 +1,26 @@
 import Vapor
 
-/// Register your application's routes here.
+/// Register your application's routes here
 public func routes(_ router: Router) throws {
 
-    // return a String
+    /// return a String
     router.get("name") { req in
         return "Ethan Hunt"
     }
 
-    // return an Int
+    /// return an Int
     router.get("age") { req in
         return 23
     }
 
-    // return JSON
+    /// return JSON
     router.get("json") { req in
         return Person(name: "Martin J. Lasek", age: 26)
     }
 }
 
-/// note: structs or classes
-/// must conform to Content to be able to encode to JSON
+/// Your class or struct must conform to `Content`
+/// for being able to return as a json in a route
 struct Person: Content {
     var name: String
     var age: Int
